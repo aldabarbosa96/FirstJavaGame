@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TEXTRPG:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TEXTRPG_jar</output-path>
+    <root id="archive" name="TEXTRPG.jar">
+      <element id="module-output" name="ZGP" />
+    </root>
+  </artifact>
+</component>
