@@ -37,6 +37,9 @@ public class Sprites  {
     public static final Sprites LADRILLO1 = new Sprites(32,0,1,0,HojaSprites.laboratorio);
     public static final Sprites LADRILLO1_FLIPPED = new Sprites(32,0,1,1,HojaSprites.laboratorio);
     public static final Sprites LADRILLO_CARTEL = new Sprites(32,0,2,0,HojaSprites.laboratorio);
+    public static final Sprites LADRILLO_VENTANAS = new Sprites(32,0,3,0,HojaSprites.laboratorio);
+    public static final Sprites LADRILLO_VENTANASX = new Sprites(32,0,3,1,HojaSprites.laboratorio);
+    public static final Sprites LADRILLO_SEÑAL = new Sprites(32,0,4,0,HojaSprites.laboratorio);
     public static final Sprites PARED = new Sprites(32,1,0,0,HojaSprites.laboratorio);
     public static final Sprites PARED_BORDES = new Sprites(32,1,1,0,HojaSprites.laboratorio);
     public static final Sprites PARED_BORDE_DERECHA = new Sprites(32,1,2,0,HojaSprites.laboratorio);
@@ -66,9 +69,11 @@ public class Sprites  {
     public static final Sprites SUELO_ESQUINA_DAR = new Sprites(32,2,4,1,HojaSprites.laboratorio);
     public static final Sprites SUELO_ESQUINA_DAB = new Sprites(32,2,4,3,HojaSprites.laboratorio);
     public static final Sprites SUELO_RAYA_ROJA = new Sprites(32,2,5,0,HojaSprites.laboratorio);
+    public static final Sprites SUELO_RAYA_AMARILLA = new Sprites(32,2,8,0,HojaSprites.laboratorio);
     public static final Sprites SUELO_RAYA_ROJAC = new Sprites(32,2,6,0,HojaSprites.laboratorio);
     public static final Sprites SUELO_SOMBRA = new Sprites(32,2,7,0,HojaSprites.laboratorio);
     public static final Sprites PUERTA = new Sprites(32,3,0,0,HojaSprites.laboratorio);
+    public static final Sprites PUERTA_ROJA = new Sprites(32,3,7,0,HojaSprites.laboratorio);
     public static final Sprites ASCENSOR = new Sprites(32,3,1,0,HojaSprites.laboratorio);
     public static final Sprites PUERTA_GRIS = new Sprites(32,3,2,0,HojaSprites.laboratorio);
     public static final Sprites PUERTA_SEGURIDAD = new Sprites(32,3,3,0,HojaSprites.laboratorio);

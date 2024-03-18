@@ -41,6 +41,15 @@ public class LoadedMap extends Map{
                 case 0xFFFF6B97:
                     tilesCatalog[i] = Tile.LADRILLO_CARTEL;
                     continue;
+                case 0xFF2C5E42:
+                    tilesCatalog[i] = Tile.LADRILLO_VENTANAS;
+                    continue;
+                case 0xFF178F4B:
+                    tilesCatalog[i] = Tile.LADRILLO_VENTANASX;
+                    continue;
+                case 0xFF470C0C:
+                    tilesCatalog[i] = Tile.LADRILLO_SEÑAL;
+                    continue;
                 case 0xFFF2A65E:
                     tilesCatalog[i] = Tile.PARED;
                     continue;
@@ -128,6 +137,9 @@ public class LoadedMap extends Map{
                 case 0xFF43733B:
                     tilesCatalog [i] = Tile.SUELO_RAYA_ROJA;
                     continue;
+                case 0xFFFFE600:
+                    tilesCatalog[i] = Tile.SUELO_RAYA_AMARILLA;
+                    continue;
                 case 0xFF1A5135:
                     tilesCatalog[i] = Tile.SUELO_RAYA_ROJAC;
                     continue;
@@ -136,6 +148,9 @@ public class LoadedMap extends Map{
                     continue;
                 case 0xFF5EA851:
                     tilesCatalog [i] = Tile.PUERTA;
+                    continue;
+                case 0xFF4C6557:
+                    tilesCatalog[i] = Tile.PUERTA_ROJA;
                     continue;
                 case 0xFFFA622A:
                     tilesCatalog[i] = Tile.ASCENSOR;

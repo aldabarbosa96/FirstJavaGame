@@ -13,6 +13,9 @@ public class Tile {
     public static final Tile LADRILLO1 =new Tile(Sprites.LADRILLO1);
     public static final Tile LADRILLO1_FLIPPED =new Tile(Sprites.LADRILLO1_FLIPPED);
     public static final Tile LADRILLO_CARTEL =new Tile(Sprites.LADRILLO_CARTEL);
+    public static final Tile LADRILLO_VENTANAS =new Tile(Sprites.LADRILLO_VENTANAS);
+    public static final Tile LADRILLO_VENTANASX =new Tile(Sprites.LADRILLO_VENTANASX);
+    public static final Tile LADRILLO_SEÑAL =new Tile(Sprites.LADRILLO_SEÑAL);
     public static final Tile PARED =new Tile(Sprites.PARED);
     public static final Tile PARED_BORDES =new Tile(Sprites.PARED_BORDES);
     public static final Tile PARED_BORDE_IZQUIERDA =new Tile(Sprites.PARED_BORDE_IZQUIERDA);
@@ -42,9 +45,11 @@ public class Tile {
     public static final Tile SUELO_ESQUINA_DAR  =new Tile(Sprites.SUELO_ESQUINA_DAR);
     public static final Tile SUELO_ESQUINA_DAB  =new Tile(Sprites.SUELO_ESQUINA_DAB);
     public static final Tile SUELO_RAYA_ROJA  =new Tile(Sprites.SUELO_RAYA_ROJA);
+    public static final Tile SUELO_RAYA_AMARILLA  =new Tile(Sprites.SUELO_RAYA_AMARILLA);
     public static final Tile SUELO_RAYA_ROJAC  =new Tile(Sprites.SUELO_RAYA_ROJAC);
     public static final Tile SUELO_SOMBRA  =new Tile(Sprites.SUELO_SOMBRA);
     public static final Tile PUERTA  =new Tile(Sprites.PUERTA);
+    public static final Tile PUERTA_ROJA  =new Tile(Sprites.PUERTA_ROJA);
     public static final Tile ASCENSOR  =new Tile(Sprites.ASCENSOR);
     public static final Tile PUERTA_GRIS  =new Tile(Sprites.PUERTA_GRIS);
     public static final Tile PUERTA_SEGURIDAD  =new Tile(Sprites.PUERTA_SEGURIDAD);
