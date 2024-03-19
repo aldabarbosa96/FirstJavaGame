@@ -18,8 +18,8 @@ public class Game extends Canvas implements Runnable {
     private static final long serialVersionUID = 1L;
     private static volatile boolean enFuncionamiento = false;
 
-    private static final int ancho = 800;
-    private static final int alto = 600;
+    private static final int ancho = 700;
+    private static final int alto = 500;
 
     private static final String nombre = "ZGP";
 
@@ -50,14 +50,14 @@ public class Game extends Canvas implements Runnable {
         addKeyListener(teclado);
 
         map = new LoadedMap("/graphics/sprites/tilepixel0.png");
-        jugador = new Jugador(teclado, Sprites.ABAJO0,1040  ,1080);
+        jugador = new Jugador(map,teclado, Sprites.ABAJO0,1727  ,481);
 
         ventana = new JFrame(nombre);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventana.setResizable(false);
+        ventana.setResizable(true);
         ventana.setLayout(new BorderLayout());
         ventana.add(this, BorderLayout.CENTER);
-        ventana.setUndecorated(true);
+        //ventana.setUndecorated(true);
         ventana.pack();
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);

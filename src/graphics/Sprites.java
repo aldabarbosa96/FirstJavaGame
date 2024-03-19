@@ -40,6 +40,7 @@ public class Sprites  {
     public static final Sprites LADRILLO_VENTANAS = new Sprites(32,0,3,0,HojaSprites.laboratorio);
     public static final Sprites LADRILLO_VENTANASX = new Sprites(32,0,3,1,HojaSprites.laboratorio);
     public static final Sprites LADRILLO_SEÑAL = new Sprites(32,0,4,0,HojaSprites.laboratorio);
+    public static final Sprites LADRILLO_VENTANA = new Sprites(32,0,5,0,HojaSprites.laboratorio);
     public static final Sprites PARED = new Sprites(32,1,0,0,HojaSprites.laboratorio);
     public static final Sprites PARED_BORDES = new Sprites(32,1,1,0,HojaSprites.laboratorio);
     public static final Sprites PARED_BORDE_DERECHA = new Sprites(32,1,2,0,HojaSprites.laboratorio);
@@ -50,6 +51,8 @@ public class Sprites  {
     public static final Sprites PARED_LUZ_IZQUIERDA = new Sprites(32,1,5,1,HojaSprites.laboratorio);
     public static final Sprites PARED_EXTINTOR = new Sprites(32,1,6,0,HojaSprites.laboratorio);
     public static final Sprites PARED_EXTINTOR_BORDE = new Sprites(32,1,7,0,HojaSprites.laboratorio);
+    public static final Sprites PARED_VENTANA = new Sprites(32,1,8,0,HojaSprites.laboratorio);
+    public static final Sprites PARED_VENTANAX = new Sprites(32,1,8,1,HojaSprites.laboratorio);
     public static final Sprites SUELO = new Sprites(32,2,0,0,HojaSprites.laboratorio);
     public static final Sprites SUELO_RAYA_VD = new Sprites(32,2,1,0,HojaSprites.laboratorio);
     public static final Sprites SUELO_RAYA_HA = new Sprites(32,2,1,4,HojaSprites.laboratorio);
@@ -71,6 +74,7 @@ public class Sprites  {
     public static final Sprites SUELO_RAYA_ROJA = new Sprites(32,2,5,0,HojaSprites.laboratorio);
     public static final Sprites SUELO_RAYA_AMARILLA = new Sprites(32,2,8,0,HojaSprites.laboratorio);
     public static final Sprites SUELO_RAYA_ROJAC = new Sprites(32,2,6,0,HojaSprites.laboratorio);
+    public static final Sprites SUELO_RAYA_ROJACY = new Sprites(32,2,6,2,HojaSprites.laboratorio);
     public static final Sprites SUELO_SOMBRA = new Sprites(32,2,7,0,HojaSprites.laboratorio);
     public static final Sprites PUERTA = new Sprites(32,3,0,0,HojaSprites.laboratorio);
     public static final Sprites PUERTA_ROJA = new Sprites(32,3,7,0,HojaSprites.laboratorio);

@@ -7,25 +7,29 @@ public class Tile {
     public int x;
     public int y;
     public Sprites sprites;
+    private boolean solid;
     public static final int LADO = 32;
-    public static final Tile VACIO = new Tile(Sprites.VACIO);
-    public static final Tile LADRILLO0 =new Tile(Sprites.LADRILLO0);
-    public static final Tile LADRILLO1 =new Tile(Sprites.LADRILLO1);
-    public static final Tile LADRILLO1_FLIPPED =new Tile(Sprites.LADRILLO1_FLIPPED);
-    public static final Tile LADRILLO_CARTEL =new Tile(Sprites.LADRILLO_CARTEL);
-    public static final Tile LADRILLO_VENTANAS =new Tile(Sprites.LADRILLO_VENTANAS);
-    public static final Tile LADRILLO_VENTANASX =new Tile(Sprites.LADRILLO_VENTANASX);
-    public static final Tile LADRILLO_SEÑAL =new Tile(Sprites.LADRILLO_SEÑAL);
-    public static final Tile PARED =new Tile(Sprites.PARED);
-    public static final Tile PARED_BORDES =new Tile(Sprites.PARED_BORDES);
-    public static final Tile PARED_BORDE_IZQUIERDA =new Tile(Sprites.PARED_BORDE_IZQUIERDA);
-    public static final Tile PARED_BORDE_DERECHA =new Tile(Sprites.PARED_BORDE_DERECHA);
-    public static final Tile PARED_CARTEL =new Tile(Sprites.PARED_CARTEL);
-    public static final Tile PARED_LUZ =new Tile(Sprites.PARED_LUZ);
-    public static final Tile PARED_LUZ_DERECHA =new Tile(Sprites.PARED_LUZ_DERECHA);
-    public static final Tile PARED_LUZ_IZQUIERDA =new Tile(Sprites.PARED_LUZ_IZQUIERDA);
-    public static final Tile PARED_EXTINTOR =new Tile(Sprites.PARED_EXTINTOR);
-    public static final Tile PARED_EXTINTOR_BORDE =new Tile(Sprites.PARED_EXTINTOR_BORDE);
+    public static final Tile VACIO = new Tile(Sprites.VACIO,true);
+    public static final Tile LADRILLO0 =new Tile(Sprites.LADRILLO0, true);
+    public static final Tile LADRILLO1 =new Tile(Sprites.LADRILLO1,true);
+    public static final Tile LADRILLO1_FLIPPED =new Tile(Sprites.LADRILLO1_FLIPPED,true);
+    public static final Tile LADRILLO_CARTEL =new Tile(Sprites.LADRILLO_CARTEL,true);
+    public static final Tile LADRILLO_VENTANAS =new Tile(Sprites.LADRILLO_VENTANAS,true);
+    public static final Tile LADRILLO_VENTANASX =new Tile(Sprites.LADRILLO_VENTANASX,true);
+    public static final Tile LADRILLO_SEÑAL =new Tile(Sprites.LADRILLO_SEÑAL,true);
+    public static final Tile LADRILLO_VENTANA =new Tile(Sprites.LADRILLO_VENTANA,true);
+    public static final Tile PARED =new Tile(Sprites.PARED,true);
+    public static final Tile PARED_BORDES =new Tile(Sprites.PARED_BORDES,true);
+    public static final Tile PARED_BORDE_IZQUIERDA =new Tile(Sprites.PARED_BORDE_IZQUIERDA,true);
+    public static final Tile PARED_BORDE_DERECHA =new Tile(Sprites.PARED_BORDE_DERECHA,true);
+    public static final Tile PARED_CARTEL =new Tile(Sprites.PARED_CARTEL,true);
+    public static final Tile PARED_LUZ =new Tile(Sprites.PARED_LUZ,true);
+    public static final Tile PARED_LUZ_DERECHA =new Tile(Sprites.PARED_LUZ_DERECHA,true);
+    public static final Tile PARED_LUZ_IZQUIERDA =new Tile(Sprites.PARED_LUZ_IZQUIERDA,true);
+    public static final Tile PARED_EXTINTOR =new Tile(Sprites.PARED_EXTINTOR,true);
+    public static final Tile PARED_EXTINTOR_BORDE =new Tile(Sprites.PARED_EXTINTOR_BORDE,true);
+    public static final Tile PARED_VENTANA =new Tile(Sprites.PARED_VENTANA,true);
+    public static final Tile PARED_VENTANAX =new Tile(Sprites.PARED_VENTANAX,true);
     public static final Tile SUELO =new Tile(Sprites.SUELO);
     public static final Tile SUELO_RAYA_VD =new Tile(Sprites.SUELO_RAYA_VD);
     public static final Tile SUELO_RAYA_HA  =new Tile(Sprites.SUELO_RAYA_HA);
@@ -47,15 +51,16 @@ public class Tile {
     public static final Tile SUELO_RAYA_ROJA  =new Tile(Sprites.SUELO_RAYA_ROJA);
     public static final Tile SUELO_RAYA_AMARILLA  =new Tile(Sprites.SUELO_RAYA_AMARILLA);
     public static final Tile SUELO_RAYA_ROJAC  =new Tile(Sprites.SUELO_RAYA_ROJAC);
+    public static final Tile SUELO_RAYA_ROJACY  =new Tile(Sprites.SUELO_RAYA_ROJACY);
     public static final Tile SUELO_SOMBRA  =new Tile(Sprites.SUELO_SOMBRA);
-    public static final Tile PUERTA  =new Tile(Sprites.PUERTA);
-    public static final Tile PUERTA_ROJA  =new Tile(Sprites.PUERTA_ROJA);
-    public static final Tile ASCENSOR  =new Tile(Sprites.ASCENSOR);
-    public static final Tile PUERTA_GRIS  =new Tile(Sprites.PUERTA_GRIS);
-    public static final Tile PUERTA_SEGURIDAD  =new Tile(Sprites.PUERTA_SEGURIDAD);
-    public static final Tile PUERTA_BLANCA  =new Tile(Sprites.PUERTA_BLANCA);
-    public static final Tile PUERTA_FIRE1  =new Tile(Sprites.PUERTA_FIRE1);
-    public static final Tile PUERTA_FIRE2  =new Tile(Sprites.PUERTA_FIRE2);
+    public static final Tile PUERTA  =new Tile(Sprites.PUERTA,true);
+    public static final Tile PUERTA_ROJA  =new Tile(Sprites.PUERTA_ROJA,true);
+    public static final Tile ASCENSOR  =new Tile(Sprites.ASCENSOR,true);
+    public static final Tile PUERTA_GRIS  =new Tile(Sprites.PUERTA_GRIS,true);
+    public static final Tile PUERTA_SEGURIDAD  =new Tile(Sprites.PUERTA_SEGURIDAD,true);
+    public static final Tile PUERTA_BLANCA  =new Tile(Sprites.PUERTA_BLANCA,true);
+    public static final Tile PUERTA_FIRE1  =new Tile(Sprites.PUERTA_FIRE1,true);
+    public static final Tile PUERTA_FIRE2  =new Tile(Sprites.PUERTA_FIRE2,true);
     /*
     public static final Tile ASFALTO0 = new Tile(Sprites.ASFALTO0);
     public static final Tile ASFALTO1 = new Tile(Sprites.ASFALTO1);
@@ -79,11 +84,16 @@ public class Tile {
 */
     public Tile(Sprites sprites){
         this.sprites = sprites;
+        solid = false;
+    }
+    public Tile(Sprites sprites, boolean solid){
+        this.sprites = sprites;
+        this.solid = solid;
     }
     public void mostrar(int x, int y, Pantalla pantalla){
         pantalla.mostrarTile(x << 5, y << 5, this);
     }
     public boolean solid(){
-        return false;
+        return solid;
     }
 }
