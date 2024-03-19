@@ -50,7 +50,7 @@ public class Game extends Canvas implements Runnable {
         addKeyListener(teclado);
 
         map = new LoadedMap("/graphics/sprites/tilepixel0.png");
-        jugador = new Jugador(map,teclado, Sprites.ABAJO0,1727  ,481);
+        jugador = new Jugador(map,teclado, Sprites.ABAJO0,2001  ,1415);
 
         ventana = new JFrame(nombre);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
