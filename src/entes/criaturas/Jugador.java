@@ -3,18 +3,19 @@ package entes.criaturas;
 import controladores.Teclado;
 import graphics.Pantalla;
 import graphics.Sprites;
+import maps.Map;
 
 public class Jugador extends Criatura{
     private Teclado teclado;
     private int animacion;
 
-    public Jugador(Teclado teclado, Sprites sprites){
+    public Jugador(Map map,Teclado teclado, Sprites sprites){
+        this.map = map;
         this.teclado = teclado;
         this.sprites = sprites;
     }
-    public Jugador(Teclado teclado,Sprites sprites, int posX, int posY){
-        this.teclado = teclado;
-        this.sprites = sprites;
+    public Jugador(Map map,Teclado teclado,Sprites sprites, int posX, int posY){
+        this(map,teclado,sprites);
         this.x = posX;
         this.y = posY;
     }
@@ -72,25 +73,23 @@ public class Jugador extends Criatura{
         }
         if (direccion == 'n') {
             sprites = Sprites.ARRIBA0;
-            if (enMovimiento) {
-                if (resto > 10 && resto <= 20) {
+            if (enMovimiento)  {
+                if (animacion % 24 > 12) {
                     sprites = Sprites.ARRIBA1;
-                } else if (resto > 20 && resto <= 25) {
-                    sprites = Sprites.ARRIBA0;
-                } else if (resto > 30) {
+                } else {
                     sprites = Sprites.ARRIBA2;
-                } else sprites = Sprites.ARRIBA0;
+                }
             }
         }
 
         if (direccion == 'w') {
             sprites = Sprites.IZQUIERDA0;
             if (enMovimiento) {
-                if (resto > 10 && resto <= 20) {
+                if (resto > 8 && resto <= 20) {
                     sprites = Sprites.IZQUIERDA1;
-                } else if (resto > 20 && resto <= 25) {
+                } else if (resto > 20 && resto <= 23) {
                     sprites = Sprites.IZQUIERDA0;
-                } else if (resto > 30) {
+                } else if (resto > 28) {
                     sprites = Sprites.IZQUIERDA2;
                 } else sprites = Sprites.IZQUIERDA0;
             }
@@ -98,11 +97,11 @@ public class Jugador extends Criatura{
         if (direccion == 'e') {
             sprites = Sprites.DERECHA0;
             if (enMovimiento) {
-                if (resto > 10 && resto <= 20) {
+                if (resto > 8 && resto <= 20) {
                     sprites = Sprites.DERECHA1;
-                } else if (resto > 20 && resto <= 25) {
+                } else if (resto > 20 && resto <= 23) {
                     sprites = Sprites.DERECHA0;
-                } else if (resto > 30) {
+                } else if (resto > 28) {
                     sprites = Sprites.DERECHA2;
                 } else sprites = Sprites.DERECHA0;
             }

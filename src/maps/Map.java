@@ -50,6 +50,12 @@ public  class Map {
             }
         }
     }
+    public Tile getTileCatalog(int posicion){
+        return tilesCatalog[posicion];
+    }
+    public int getAncho(){
+        return ancho;
+    }
     /*public Tile getTile(final int x, final int y) {
         if (x<0 || y<0 || x>= ancho || y>= alto){
             return Tile.VACIO;
