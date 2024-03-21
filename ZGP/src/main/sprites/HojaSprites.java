@@ -16,13 +16,6 @@ public class HojaSprites {
 
     final private Sprite[] sprites;
 
-    public Sprite getSprites(final int indice) {
-        return sprites[indice];
-    }
-    public Sprite getSprite(final int x, final int y){
-        return sprites[x+y*anchoSprites];
-    }
-
     public HojaSprites(final String ruta, final int tamañoSprites, final boolean hojaOpaca){
         final BufferedImage imagen;
 
@@ -69,8 +62,15 @@ public class HojaSprites {
                 final int posX = x*anchoSprites;
                 final int posY = y* altoSprites;
 
-                sprites[x+y*anchoSprites] = new Sprite(imagen.getSubimage(posX,posY,anchoSprites,altoSprites));
+                sprites[x+y*anchoHojaSprites] = new Sprite(imagen.getSubimage(posX,posY,anchoSprites,altoSprites));
             }
         }
     }
+    public Sprite getSprites(final int indice) {
+        return sprites[indice];
+    }
+    public Sprite getSprites(final int x, final int y){
+        return sprites[x+y*anchoHojaSprites];
+    }
+
 }

@@ -7,7 +7,7 @@ public class Sprite {
     private final int ancho;
     private final int alto;
 
-    public BufferedImage getImage(){
+    public BufferedImage getImagen(){
         return imagen;
     }
     public int getAncho() {

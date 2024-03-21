@@ -20,7 +20,7 @@ public class GestPrincipal {
     }
 
     public static void main(String[] args) {
-        GestPrincipal mm = new GestPrincipal("ZGP", 640,360);
+        GestPrincipal mm = new GestPrincipal("ZGP", 720,500);
         
         mm.iniciarJuego();
         mm.iniciarBuclePrincipal();
