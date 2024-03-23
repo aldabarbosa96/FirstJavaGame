@@ -2,20 +2,21 @@ package main.statusMachine.status.game;
 
 import main.sprites.HojaSprites;
 import main.statusMachine.EstadoJuego;
+import main.tools.CargadorRecursos;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class GestJuego implements EstadoJuego {
     private GestMapa gestorMapa;
-    HojaSprites hs = new HojaSprites("/resources/interiortiles.png",32, true);
+    String texto = CargadorRecursos.leerArchivoTexto("/resources/text/prueba.tzgp");
+    HojaSprites hs = new HojaSprites("/resources/tiles/interiortiles.png",32, true);
     @Override
     public void actualizar() {
     }
 
     @Override
     public void dibujar(Graphics g) {
-        BufferedImage imagen = hs.getSprites(3,3).getImagen();
-        g.drawImage(imagen, 100,100,null);
+        g.setColor(Color.white);
+       g.drawString(texto,10,10);
     }
 }

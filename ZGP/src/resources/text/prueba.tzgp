@@ -1,0 +1,57 @@
+12  //ancho hoja
+*
+8   //alto hoja
+*
+1   // hojas sprites usadas. Ej: 1,3,9
+*
+1:1-0   //Pared ladrillo simple  //nomenclatura: nº sprite : nº hojaSprites : posSprite en tileSheet
+#
+2:1-4   //Pared ladrillo grieta
+#
+3:1-8   //Pared ladrillo cartel radiación
+#
+4:1-12  //Pared ladrillo ventanal izquierdo
+#
+5:1-16  //Pared ladrillo ventanal derecho
+#
+6:1-20  //Pared ladrillo ventana
+#
+7:1-24  //Pared señal peligro eléctrico
+#
+8:1-1   //Pared gris simple
+#
+9:1-5   //Pared gris bordes ambos lados
+#
+10:1-9  //Pared gris borde derecho (hay que agregar a la hoja de sprites el lado izquierdo)
+#
+11:1-13 //Pared gris cartel verde
+#
+12:1-17 //Pared gris luz centro
+#
+13:1-21 //Pared gris luz derecha (hay que agregar a la hoja de sprites el lado izquierdo)
+#
+14:1-25 //Pared gris extintor
+#
+15:1-28 //Pared gris extintor borde derecho
+#
+16:1-31 //Pared gris ventana izquierda
+#
+17:1-33 //Pared gris ventana derecha
+#
+18:1-2  //Suelo verde simple (1)
+#
+19:1-6  //Suelo verde raya vertical derecha (2)
+#
+20:1-10 //Suelo verde raya horizontal arriba (3)
+#
+21:1-14 //Suelo verde raya 90º (4)
+#
+22:1-18 //Suelo verde esquina blanca (5)
+#
+23:1-22 //Suelo verde entrada roja (6)
+#
+24:1-26 //Suelo verde raya roja (7)
+#
+25:1-29 //suelo verde sombreado abajo (8)
+#
+26:1-32 //Suelo verde raya peligro (9)
