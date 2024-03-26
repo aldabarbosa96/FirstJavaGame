@@ -30,7 +30,7 @@ public class CargadorRecursos {
     public static BufferedImage cargarImgCompTranslucida(final String ruta) {
         Image imagen = null;
         try {
-            imagen = ImageIO.read(ClassLoader.class.getResource(ruta));
+            imagen = ImageIO.read(CargadorRecursos.class.getResourceAsStream(ruta));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

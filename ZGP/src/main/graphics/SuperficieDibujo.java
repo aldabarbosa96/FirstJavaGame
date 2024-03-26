@@ -1,5 +1,7 @@
 package main.graphics;
 
+import main.control.GestControles;
+import main.control.Raton;
 import main.control.Teclado;
 import main.statusMachine.GestEstado;
 
@@ -13,8 +15,7 @@ public class SuperficieDibujo extends Canvas {
 
     private int ancho;
     private int alto;
-    private Teclado teclado;
-
+    private Raton raton;
     public int getAncho() {
         return ancho;
     }
@@ -23,19 +24,16 @@ public class SuperficieDibujo extends Canvas {
         return alto;
     }
 
-    public Teclado getTeclado() {
-        return teclado;
-    }
-
     public SuperficieDibujo(final int ancho, final int alto){
         this.ancho = ancho;
         this.alto = alto;
 
-        teclado = new Teclado();
+        this.raton = new Raton();
 
         setIgnoreRepaint(true);
+        setCursor(raton.getCursor());
         setPreferredSize(new Dimension(ancho, alto));
-        addKeyListener(teclado);
+        addKeyListener(GestControles.teclado);
         setFocusable(true);
         requestFocus();
     }

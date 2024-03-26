@@ -1,5 +1,6 @@
 package main;
 
+import main.control.GestControles;
 import main.graphics.SuperficieDibujo;
 import main.graphics.Ventana;
 import main.statusMachine.GestEstado;
@@ -20,7 +21,11 @@ public class GestPrincipal {
     }
 
     public static void main(String[] args) {
-        GestPrincipal mm = new GestPrincipal("ZGP", 720,500);
+        GestPrincipal mm = new GestPrincipal("ZGP", 800,600);
+
+        Constantes.ANCHO_PANTALLA = 800;
+        Constantes.ALTO_PANTALLA = 600;
+
         
         mm.iniciarJuego();
         mm.iniciarBuclePrincipal();
@@ -58,6 +63,7 @@ public class GestPrincipal {
             while (delta >= 1){
                 actualizar();
                 aps++;
+                Constantes.APS = aps;
                 delta--;
             }
             dibujar();
@@ -66,13 +72,13 @@ public class GestPrincipal {
             if (System.nanoTime() - referenciaCont > nanoSgxSg){
                 System.out.println("FPS: "+fps+" APS: "+aps);
                 aps = 0;
+                Constantes.APS = aps;
                 fps = 0;
                 referenciaCont = System.nanoTime();
             }
         }
     }
     private void actualizar(){
-       sd.getTeclado().actualizar();
        ge.actualizar();
     }
     private void dibujar(){

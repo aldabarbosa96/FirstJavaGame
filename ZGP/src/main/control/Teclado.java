@@ -4,39 +4,44 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Teclado implements KeyListener {
-    private final static int NUM_TECLAS = 256;
-    private final boolean[] teclas = new boolean[NUM_TECLAS];
-    public boolean arriba;
-    public boolean abajo;
-    public boolean izquierda;
-    public boolean derecha;
-    public boolean exit;
-    public boolean correr;
-    public boolean saltar;
+    public Tecla arriba = new Tecla();
+    public Tecla abajo = new Tecla();
+    public Tecla izquierda = new Tecla();
+    public Tecla derecha = new Tecla();
 
-    public void actualizar(){
-        arriba = teclas[KeyEvent.VK_W];
-        abajo = teclas[KeyEvent.VK_S];
-        izquierda = teclas[KeyEvent.VK_A];
-        derecha = teclas[KeyEvent.VK_D];
-        exit = teclas[KeyEvent.VK_ESCAPE];
-        correr = teclas[KeyEvent.VK_SHIFT];
-        saltar = teclas[KeyEvent.VK_SPACE];
-    }
-
-    @Override
     public void keyPressed(KeyEvent e) { //cualquier tecla pulsada;
-        teclas[e.getKeyCode()] = true;
-
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_W:
+                arriba.teclaPulsada();
+                break;
+            case KeyEvent.VK_S:
+                abajo.teclaPulsada();
+                break;
+            case KeyEvent.VK_A:
+                izquierda.teclaPulsada();
+                break;
+            case KeyEvent.VK_D:
+                derecha.teclaPulsada();
+                break;
+        }
     }
-    @Override
     public void keyReleased(KeyEvent e) { //tecla sostenida;
-        teclas[e.getKeyCode()] = false;
-
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_W:
+                arriba.teclaSoltada();
+                break;
+            case KeyEvent.VK_S:
+                abajo.teclaSoltada();
+                break;
+            case KeyEvent.VK_A:
+                izquierda.teclaSoltada();
+                break;
+            case KeyEvent.VK_D:
+                derecha.teclaSoltada();
+                break;
+        }
     }
-    @Override
-    public void keyTyped(KeyEvent e) {
-        //tecla que permite la escritura de un carácter;
+    public void keyTyped (KeyEvent e){
     }
 }
 
