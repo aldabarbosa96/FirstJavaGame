@@ -1,5 +1,6 @@
 package main.graphics;
 
+import main.Constantes;
 import main.tools.CargadorRecursos;
 
 import javax.swing.*;
@@ -15,7 +16,7 @@ public class Ventana extends JFrame implements Serializable {
     public Ventana(final String titulo,final SuperficieDibujo sd){
         this.titulo = titulo;
 
-        BufferedImage imagen = CargadorRecursos.cargarImgCompOpaca("/resources/images/x_logo4.png");
+        BufferedImage imagen = CargadorRecursos.cargarImgCompOpaca(Constantes.RUTA_ICONO_VENTANA);
         this.icon = new ImageIcon(imagen);
 
         configurarVentana(sd);

@@ -1,6 +1,5 @@
 package main;
 
-import main.control.GestControles;
 import main.graphics.SuperficieDibujo;
 import main.graphics.Ventana;
 import main.statusMachine.GestEstado;
@@ -14,6 +13,8 @@ public class GestPrincipal {
     private SuperficieDibujo sd;
     private Ventana ventana;
     private GestEstado ge;
+    private static int fps = 0;
+    private static int aps = 0;
     private GestPrincipal(final String titulo, final int ancho, final int alto){
         this.titulo = titulo;
         this.ancho = ancho;
@@ -21,10 +22,10 @@ public class GestPrincipal {
     }
 
     public static void main(String[] args) {
-        GestPrincipal mm = new GestPrincipal("ZGP", 800,600);
+        GestPrincipal mm = new GestPrincipal("ZGP", Constantes.ANCHO_PANTALLA_COMPLETA,Constantes.ANCHO_PANTALLA_COMPLETA);
 
-        Constantes.ANCHO_PANTALLA = 800;
-        Constantes.ALTO_PANTALLA = 600;
+        Constantes.ANCHO_JUEGO = 800;
+        Constantes.ALTO_JUEGO = 480;
 
         
         mm.iniciarJuego();
@@ -43,8 +44,8 @@ public class GestPrincipal {
     }
 
     private void iniciarBuclePrincipal() {
-        int aps = 0;
-        int fps=0;
+        int actualizacionAc = 0;
+        int framesAc=0;
 
         final int nanoSgxSg = 1000000000;
         final int actxSg = 60;
@@ -62,27 +63,35 @@ public class GestPrincipal {
 
             while (delta >= 1){
                 actualizar();
-                aps++;
-                Constantes.APS = aps;
+                actualizacionAc++;
                 delta--;
             }
             dibujar();
-            fps++;
+            framesAc++;
 
             if (System.nanoTime() - referenciaCont > nanoSgxSg){
-                System.out.println("FPS: "+fps+" APS: "+aps);
-                aps = 0;
-                Constantes.APS = aps;
-                fps = 0;
+
+                aps = actualizacionAc;
+                fps = framesAc;
+
+                actualizacionAc = 0;
+                framesAc = 0;
                 referenciaCont = System.nanoTime();
             }
         }
     }
     private void actualizar(){
        ge.actualizar();
+       sd.actualizar();
     }
     private void dibujar(){
        sd.dibujar(ge);
     }
 
+    public static int getFps(){
+        return fps;
+    }
+    public static int getAps(){
+        return aps;
+    }
 }

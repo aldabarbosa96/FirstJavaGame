@@ -1,0 +1,164 @@
+12  //ancho hoja
+*
+8   //alto hoja
+*
+1   // hojas sprites usada; Ej: 1,3,9
+*
+00:1-00       //Suelo verde simple  //nomenclatura: nº sprite : nº hojaSprites : posSprite en tileSheet
+#
+01:1-01       //Suelo verede raya blanca vertical derecha
+#
+02:1-02       //Suelo verde raya blanca vertical izqueirda
+#
+03:1-03       //Suelo verde raya blanca horizontal arriba
+#
+04:1-04       //Suelo verde raya blanca horizontal abajo
+#
+05:1-05       //Suelo verde raya blanca horizontal esquina derecha arriba
+#
+06:1-06       //Suelo verde raya blanca horizontal esquina izquierda arriba
+#
+07:1-07       //Suelo verde raya blanca horizontal esquina izquierda abajo
+#
+08:1-08       //Suelo verde raya blanca horizontal esquina derecha abajo
+#
+9:1-09      //Suelo verde raya blanca vertical esquina ezquierda abajo
+#
+10:1-10     //Suelo verde raya blanca vertical esquina derecha abajo
+#
+11:1-11     //Suelo verde raya blanca vertical esquina ezquierda arriba
+#
+12:1-12     //Suelo verde raya blanca vertical esquina derecha arriba
+#
+13:1-13     //Suelo verde raya blanca esquina 90ª superior ezquierda
+#
+14:1-14     //Suelo verde raya blanca esquina 90ª superior derecha
+#
+15:1-15     //Suelo verde raya blanca esquina 90ª inferior derecha
+#
+16:1-16     //Suelo verde raya blanca esquina 90ª inferior inzquierda
+#
+17:1-17     //Suelo verde raya blanca esquinera superior izquierda
+#
+18:1-18     //Suelo verde raya blanca esquinera superior derecha
+#
+19:1-19     //Suelo verde raya blanca esquinera inferior derecha
+#
+20:1-20     //Suelo verde raya blanca esquinera inferior izquierda
+#
+21:1-21     //Suelo verde raya roja entrada horizontal arriba sombreada
+#
+22:1-22     //Suelo verde raya roja entrada horizontal abajo
+#
+23:1-23     //Suelo verde raya roja entrada vertical derecha
+#
+24:1-24     //Suelo verde raya roja entrada vertical izquierda
+#
+25:1-25     //Suelo verde raya roja peligro horizontal arriba
+#
+26:1-26     //Suelo verde raya roja peligro horizontal abajo
+#
+27:1-27     //Suelo verde raya roja peligro vertical derecha
+#
+28:1-28     //Suelo verde raya roja peligro vertical izquierda
+#
+29:1-29     //Suelo verde raya franjas horizontal arriba
+#
+30:1-30     //Suelo verde raya franjas horizontal abajo
+#
+31:1-31     //Suelo verde raya franjas vertical derecha
+#
+32:1-32     //Suelo verde raya franjas vertical izquierda
+#
+33:1-33     //Suelo verde sombra abajo
+#
+34:1-34     //Suelo verde sombra arriba
+#
+35:1-35     //Suelo verde sombra derecha
+#
+36:1-36     //Suelo verde sombra izquierda
+#
+40:1-40     //Pared gris
+#
+41:1-41     //Pared gris bordes ambos lados
+#
+42:1-42     //Pared gris borde derecho
+#
+43:1-43     //Pared gris borde izquierdo
+#
+44:1-44     //Pared gris cartel verde
+#
+45:1-45     //Pared gris luz
+#
+46:1-46     //Pared gris luz borde derecho
+#
+47:1-47     //Pared gris luz borde izquierdo
+#
+48:1-48     //Pared gris extintor
+#
+49:1-49     //Pared gris extintor borde dercho
+#
+50:1-50     //Pared gris extintor borde inzquierdo
+#
+51:1-51     //Pared gris ventana ezquierda
+#
+52:1-52     //Pared gris ventana derecha
+#
+60:1-60     //Pared ladrillo
+#
+52:1-61     //Pared ladrillo grietas
+#
+60:1-60     //Pared ladrillo
+#
+61:1-61     //Pared ladrillo grietas
+#
+62:1-62     //Pared grietas flipped
+#
+63:1-63     //Pared ladrillos cartel cuadrado
+#
+64:1-64     //Pared ladrillos cartel triangular
+#
+65:1-65     //Pared ladrillos ventanal izquierdo
+#
+66:1-66     //Pared ladrillos ventanal derecho
+#
+67:1-67     //Pared ladrillos ventana
+#
+80:1-80     //Puerta azul
+#
+81:1-81     //Puerta roja
+#
+82:1-82     //Ascensor
+#
+83:1-83     //Puerta gris
+#
+84:1-84     //Puerta gris ventana
+#
+85:1-85     //Puerta azul seguridad
+#
+86:1-86     //Carterl triangular
+#
+87:1-87     //Puerta FIRE EXIT (..fire)
+#
+88:1-88     //Techo pared gris
+#
+89:1-89     //Techo pared ladrillo
+*
+000000000000        //Mapa colisiones (1 = collider)
+111111111111        //Este mapa está a la inversa
+100010000001
+100010000001
+100011100001
+111111100001
+111111111111
+111111111111
+*
+52 51 51 55 51 64 51 51 53 58 51 51     //Mapa disposición tiles
+14 04 04 04 06 30 07 04 04 04 04 15
+03 67 67 67 01 67 67 67 67 67 67 02
+03 67 67 67 01 41 62 67 67 67 67 02
+03 41 42 47 01 35 22 67 67 67 67 02
+03 35 35 35 01 01 01 45 61 61 44 02
+03 01 01 01 01 01 01 35 35 35 35 02
+17 05 05 05 09 27 08 05 05 05 05 16
+*

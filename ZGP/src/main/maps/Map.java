@@ -14,6 +14,11 @@ public class Map {
     private final int ancho;
     private final int alto;
     private final Sprite[] paleta;
+    private final boolean[] colisiones;
+    public ArrayList<Rectangle> areaColision = new ArrayList<Rectangle>();
+    private final int[] sprites;
+    private final int MARGEN_X= Constantes.ANCHO_JUEGO / 2 - Constantes.LADO_SPRITE / 2;
+    private final int MARGEN_Y= Constantes.ALTO_JUEGO / 2 - Constantes.LADO_SPRITE / 2;
 
     public int getAncho() {
         return ancho;
@@ -32,9 +37,6 @@ public class Map {
     public Sprite[] getPaleta(){
         return this.paleta;
     }
-
-    private final boolean[] colisiones;
-    private final int[] sprites;
 
     public Map(final String ruta) {
         String contenido = CargadorRecursos.leerArchivoTexto(ruta);
@@ -62,7 +64,7 @@ public class Map {
 
     private Sprite[] asignarSprites(final String[] partesPaleta, final String[] hojaSeparada){
         Sprite[] paleta = new Sprite[partesPaleta.length];
-        HojaSprites hoja = new HojaSprites("/resources/tiles/"+ hojaSeparada[0] + ".png",32,true );
+        HojaSprites hoja = new HojaSprites("/resources/tiles/TileSheet0"+ hojaSeparada[0] + ".png",Constantes.LADO_SPRITE,false );
 
         for (int i=0;i<partesPaleta.length; i++){
             String spriteTemporal = partesPaleta[i];
@@ -116,15 +118,44 @@ public class Map {
         }
         return vectorSprites;
     }
-    public void dibujar(Graphics g, int posX, int posY){
-        int anchoSprite = Constantes.LADO_SPRITE;
-        int altoSprite = anchoSprite;
+    public void actualizar(final int posX, final int posY){
+        actualizaAreasC(posX,posY);
+    }
+    private void actualizaAreasC(final int posX, final int posY){
+        if (!areaColision.isEmpty()){
+            areaColision.clear();
+        }
+        for (int y = 0;y<this.alto;y++){
+            for (int x = 0;x<this.ancho;x++){
+                int puntoX = x * Constantes.LADO_SPRITE - posX + MARGEN_X;
+                int puntoY = y * Constantes.LADO_SPRITE - posY + MARGEN_Y;
 
+                if (colisiones[x+y*this.ancho]){
+                    final Rectangle rec = new Rectangle(puntoX,puntoY,Constantes.LADO_SPRITE,Constantes.LADO_SPRITE);
+                    areaColision.add(rec);
+                }
+            }
+        }
+    }
+    public void dibujar(Graphics g, final int posX, final int posY){
         for (int y=0; y<this.alto;y++){
             for (int x =0; x<this.ancho;x++){
                 BufferedImage imagen = paleta[sprites[x+y*this.ancho]].getImagen();
-                g.drawImage(imagen,x*anchoSprite - posX,y*altoSprite-posY,null);
+
+                int puntoX = x * Constantes.LADO_SPRITE - posX + MARGEN_X;
+                int puntoY = y * Constantes.LADO_SPRITE - posY + MARGEN_Y;
+
+                g.drawImage(imagen,puntoX,puntoY,null);
             }
         }
+    }
+    public Rectangle getBordes(final int posX, final int posY, final int anchoJugador, final int altoJugador){
+
+        int x = MARGEN_X - posX + anchoJugador;
+        int y = MARGEN_Y - posY + altoJugador;
+        int ancho = this.ancho * Constantes.LADO_SPRITE - anchoJugador * 2;
+        int alto = this.alto * Constantes.LADO_SPRITE - altoJugador * 2;
+
+        return new Rectangle(x,y,ancho,alto);
     }
 }
